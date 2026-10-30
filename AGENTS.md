@@ -1,6 +1,6 @@
 # Repository Instructions
 
-The project-wide instructions in `/Users/zhaoyan/Documents/Project/AGENTS.md` apply.
+Parent workspace instructions apply when this repository is checked out inside a managed project workspace.
 
 ## Public/private boundary
 

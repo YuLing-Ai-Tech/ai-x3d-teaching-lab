@@ -1,0 +1,7 @@
+/* 地理 · 探究页签：常用指令、指令框、数据卡 */
+.geo-controls { display: grid; gap: .45rem; }
+.geo-chips button { flex: 1 1 auto; padding: .35rem .45rem; font-size: .8rem; }
+.geo-command { display: flex; gap: .35rem; }
+.geo-command input { flex: 1; min-width: 0; padding: .45rem .6rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, .18); background: rgba(5, 14, 22, .6); color: inherit; font: inherit; font-size: .85rem; }
+.geo-command input:focus { outline: none; border-color: var(--accent); }
+.geo-command button { padding: .45rem .8rem; border-radius: 8px; font-size: .85rem; }

@@ -1,0 +1,13 @@
+{
+  "conditions": "标准沸点指 101.325 kPa（1 atm）下的沸点；“室温状态”指 25 °C、101.325 kPa 下的纯物质。数据只适用于纯物质，不适用于溶液、混合物或商品。",
+  "source": "S14",
+  "accessed": "2026-10-25",
+  "items": {
+    "CCO": { "name": "乙醇", "cas": "64-17-5", "boilingK": 351.5, "uncertaintyK": 0.2, "state25C": "液体", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C64175&Mask=4", "note": "NIST 对 138 个来源值的平均。" },
+    "COC": { "name": "二甲醚", "cas": "115-10-6", "boilingK": 248.3, "uncertaintyK": 1.2, "state25C": "气体", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C115106&Mask=4", "note": "NIST 列出 5 个来源值：较新的 3 个为 248.2–248.3 K，1920 年代的 2 个为 249.2–249.5 K；这里取 248.3 K，不确定度覆盖全部 5 个值。" },
+    "CCCC": { "name": "正丁烷", "cas": "106-97-8", "boilingK": 273, "uncertaintyK": 1, "state25C": "气体", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C106978&Mask=4", "note": "NIST 对 33 个来源值的平均。" },
+    "CC(C)C": { "name": "异丁烷", "cas": "75-28-5", "boilingK": 262, "uncertaintyK": 2, "state25C": "气体", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C75285&Mask=4", "note": "NIST 对 24 个来源值的平均。" },
+    "C=C": { "name": "乙烯", "cas": "74-85-1", "boilingK": 169, "uncertaintyK": 1, "state25C": "气体", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C74851&Mask=4", "note": "NIST 对 9 个来源值的平均。" },
+    "C#C": { "name": "乙炔", "cas": "74-86-2", "boilingK": 189, "uncertaintyK": 1, "state25C": "气体", "url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C74862&Mask=4", "note": "三相点压力约 1.28 bar，高于 1 atm：常压下固态乙炔直接升华，189 K 是升华点而不是液体沸腾。" }
+  }
+}

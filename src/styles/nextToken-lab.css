@@ -1,0 +1,25 @@
+/* 《下一个词》探究层：数据卡里的候选条形图，以及预测锁定前遮住光柱。 */
+
+.nt-controls .nt-prompts button { flex: 1 1 30%; }
+.nt-data strong { display: block; font-size: 1rem; line-height: 1.4; margin: .15rem 0 .3rem; }
+.nt-blank { color: var(--accent); margin-left: .15rem; }
+.nt-bars { list-style: none; margin: .45rem 0 0; padding: 0; display: grid; gap: .18rem; }
+.nt-bars li { display: grid; grid-template-columns: 4.2em 1fr 7.4em; align-items: center; gap: .4rem; font-size: .78rem; }
+.nt-tok { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; color: #eaf6ff; }
+.nt-bar { position: relative; height: .62rem; border-radius: 4px; background: rgba(120, 200, 255, .08); overflow: hidden; }
+.nt-bar i { position: absolute; left: 0; top: 0; bottom: 0; min-width: 1px; background: var(--accent); border-radius: 4px; }
+.nt-bar i.nt-hot { top: 55%; background: #57d8ff; }
+.nt-p { font: 600 .74rem "SF Mono", ui-monospace, monospace; color: var(--muted); text-align: right; white-space: nowrap; }
+.nt-p em { font-style: normal; color: #9fe0ff; margin-left: .25rem; }
+
+/* 预测锁定前：光柱、概率标签与已生成的词都遮住，只留前文 */
+.lang-stage.nt-hold canvas { opacity: 0; }  /* 模糊后柱高仍会泄露答案，干脆不显示 */
+.lang-stage.nt-hold .tag-layer { opacity: 0; }  /* 标签自身带内联 visibility，只能整层透明 */
+.lang-stage.nt-hold .token-sentence span.gen:nth-child(2) { visibility: hidden; }
+.lang-stage.nt-hold::after {
+  content: "先在“探究”里锁定预测，光柱与概率才会出现";
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 5;
+  padding: .7rem 1.1rem; border-radius: 10px; background: rgba(3, 10, 16, .72); color: #dfe9ee;
+  font-size: 1rem; pointer-events: none; white-space: nowrap;
+}
+@media (max-width: 600px) { .lang-stage.nt-hold::after { white-space: normal; width: 80%; text-align: center; } }

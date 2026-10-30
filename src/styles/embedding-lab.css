@@ -1,0 +1,26 @@
+/* 词向量宇宙 · 探究控件（只作用于 #/embedding） */
+.em-controls { display: grid; gap: .45rem; }
+.em-box { margin: 0; padding: .45rem .55rem .55rem; border: 1px solid rgba(157,199,220,.18); border-radius: 8px; display: grid; gap: .4rem; min-width: 0; }
+.em-box[hidden] { display: none; }
+.em-box legend { padding: 0 .3rem; color: var(--muted); font-size: .78rem; }
+.em-presets { flex-wrap: wrap; }
+.em-presets[hidden] { display: none; }
+.lang-inquiry-controls .em-presets button { flex: 0 1 auto; white-space: nowrap; font-size: .76rem; padding: .32rem .45rem; }
+.em-row { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; }
+.em-row4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.lang-inquiry-controls .em-row label { display: flex; flex-direction: column; justify-content: flex-start; gap: .15rem; margin: 0; font-size: .74rem; color: var(--muted); min-width: 0; }
+.em-row select { width: 100%; min-width: 0; }
+.em-run { justify-self: start; }
+.em-locked { margin: 0; font-size: .8rem; color: var(--muted); }
+.em-locked[hidden] { display: none; }
+.em-data { margin: .1rem 0 0; padding: .7rem .8rem; border: 1px solid rgba(138,123,255,.35); border-radius: 8px; background: rgba(138,123,255,.06); }
+.em-data[hidden] { display: none; }
+.em-data small { color: var(--muted); font-size: .72rem; }
+.em-data strong { display: block; font-size: 1.05rem; margin: .15rem 0 .3rem; }
+.em-data p { margin: .4rem 0 0; font-size: .8rem; }
+.em-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.em-metrics dd { font-size: .85rem; }
+.em-top { margin: .2rem 0 0; padding-left: 1.3rem; font-size: .85rem; }
+.em-top .em-expected { color: #ffd38a; }
+.langlab[data-school="初中"] .em-senior { display: none; }
+@media (max-width: 520px) { .em-row4 { grid-template-columns: 1fr 1fr; } }

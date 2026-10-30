@@ -1,0 +1,21 @@
+/* 语言编译台 · 探究页签 */
+.cp-controls { display: grid; gap: .45rem; }
+.cp-presets { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem; }
+.cp-presets .gv-label { min-width: 4.2em; }
+.cp-presets button, .cp-row button { padding: .35rem .6rem; font-size: .78rem; border-radius: 8px; }
+.cp-presets button[aria-pressed="true"] { background: var(--accent); color: #061019; border-color: transparent; font-weight: 700; }
+.cp-controls textarea { width: 100%; box-sizing: border-box; resize: vertical; background: #0e1f2c; border: 1px solid var(--line); color: #fff; border-radius: 8px; padding: .5rem .6rem; font: inherit; font-size: .9rem; }
+.cp-row { display: flex; gap: .4rem; flex-wrap: wrap; }
+.cp-pinned, .cp-locked { margin: 0; font-size: .8rem; color: var(--muted); }
+.cp-pinned b { color: #e8f6fb; font-weight: 600; }
+.cp-data[hidden] { display: none; }
+.cp-data p { margin: .4rem 0 0; font-size: .82rem; }
+.cp-table { width: 100%; border-collapse: collapse; font-size: .78rem; margin-top: .4rem; }
+.cp-table th, .cp-table td { padding: .26rem .35rem; border-bottom: 1px solid rgba(157,199,220,.12); text-align: left; vertical-align: top; }
+.cp-table thead th { color: var(--accent); font-weight: 600; }
+.cp-table tbody th { color: var(--muted); font-weight: 500; white-space: nowrap; }
+.cp-table tr.cp-guessed td, .cp-table tr.cp-clamped td { color: #ffb27a; }
+.cp-table tr.cp-stated td:first-of-type { color: #7ff0b8; }
+.cp-vague { color: #ff8a7c; border-bottom: 1px dashed currentColor; }
+.cp-world[data-world="same"] b { color: #7ff0b8; }
+.cp-world[data-world="same-by-default"] b, .cp-world[data-world="different-values"] b, .cp-world[data-world="different-shape"] b, .cp-world[data-world="unreadable"] b { color: #ffb27a; }

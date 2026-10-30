@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "yuling-logo",
+      "path": "public-core/brand/yuling-logo.svg",
+      "cases": ["all"],
+      "source": "YuLing-Ai-Tech official brand asset",
+      "author": "YuLing-Ai-Tech",
+      "license": "Trademarked brand asset; see TRADEMARKS.md",
+      "redistributable": true,
+      "sha256": "f12c4cbe6bd10b5c5d673623255a9f9431595e27a51136f2647472bb56058973",
+      "storage": "repository"
+    },
+    {
+      "id": "bge-m3-teaching-embeddings",
+      "path": "public-core/data/embeddings.json",
+      "cases": ["embedding"],
+      "source": "Locally generated with BAAI/bge-m3 (1024 dimensions)",
+      "author": "YuLing-Ai-Tech; upstream model BAAI",
+      "license": "Generated teaching data; upstream model MIT",
+      "redistributable": true,
+      "sha256": "43defb47027fed1cf2a3236df1777a73128d7959d89a1d3053fa8fcbeb1ffdb3",
+      "storage": "repository"
+    },
+    {
+      "id": "next-token-teaching-probabilities",
+      "path": "public-core/data/next-token.json",
+      "cases": ["next-token"],
+      "source": "Locally generated Qwen-family model output; no model weights redistributed",
+      "author": "YuLing-Ai-Tech",
+      "license": "Generated teaching data; Qwen3 open-weight family Apache-2.0",
+      "redistributable": true,
+      "sha256": "e1dc449448e2f58419893d004a0e13f1af7f830b68527f377b6ad077fb8d4140",
+      "storage": "repository"
+    },
+    {
+      "id": "rdkit-molecule-conformers",
+      "path": "public-core/data/molecules.json",
+      "cases": ["molecule"],
+      "source": "Locally generated with RDKit ETKDG and MMFF",
+      "author": "YuLing-Ai-Tech; generated with RDKit",
+      "license": "Generated teaching data; RDKit BSD-3-Clause",
+      "redistributable": true,
+      "sha256": "3aa798ec92bb76906ff53b69c1048bab5b33e8f92f898a5ce91c1782363809e6",
+      "storage": "repository"
+    },
+    {
+      "id": "molecule-property-factual-extract",
+      "path": "public-core/data/molecule-properties.json",
+      "cases": ["molecule"],
+      "source": "Small attributed factual extract from NIST Chemistry WebBook",
+      "author": "YuLing-Ai-Tech compilation; source NIST",
+      "license": "Attributed factual extract; NIST SRD terms and disclaimer apply",
+      "redistributable": true,
+      "sha256": "88444ba4cae4b34c939852922c4154b0f567e87f055a0f1a436dff68ecec5c97",
+      "storage": "repository"
+    },
+    {
+      "id": "local-runtime-baseline",
+      "path": "private-assets/runtime/public",
+      "cases": ["long-march", "blender", "geo", "fallback-media"],
+      "source": "Copied from the accepted 2026-10-29 classroom baseline",
+      "author": "Mixed; see private checksum and source records",
+      "license": "Mixed; local-only pending per-file public redistribution review",
+      "redistributable": false,
+      "sha256": "a0fc3138ec6a85ccd6927f4e5f4cb4dff617a99f0ae7fc9d772c013f0729f8e9",
+      "storage": "private-local"
+    },
+    {
+      "id": "volcano-source-cache",
+      "path": "private-assets/source/volcano-vdb",
+      "cases": ["blender"],
+      "source": "JangaFX and Poly Haven source cache plus build inputs",
+      "author": "Mixed; see docs/来源与边界.md",
+      "license": "Local-only pending archive-level audit",
+      "redistributable": false,
+      "sha256": "20dd0a333e75cb633502c79309c41ee3c0d73e2fcf032ad50508ee5094df0995",
+      "storage": "private-local"
+    },
+    {
+      "id": "local-course-deliverables",
+      "path": "private-assets/deliverables",
+      "cases": ["course-delivery"],
+      "source": "Copied from the accepted 2026-10-29 classroom baseline",
+      "author": "YuLing-Ai-Tech",
+      "license": "Local-only generated deliverables",
+      "redistributable": false,
+      "sha256": "dcc01da4317c8cceb2b875a6782f5052baed1ce569876f6f8e9b11c42391063d",
+      "storage": "private-local"
+    }
+  ]
+}

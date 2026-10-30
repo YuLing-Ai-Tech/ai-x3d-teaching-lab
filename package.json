@@ -1,0 +1,49 @@
+{
+  "name": "ai-3d-teaching-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assets:setup": "node scripts/setup-local-assets.mjs",
+    "assets:verify": "node scripts/verify-asset-manifest.mjs",
+    "dev": "VITE_AI_X3D_ASSET_MODE=public-core vite --host 0.0.0.0",
+    "dev:local": "npm run assets:setup && VITE_AI_X3D_ASSET_MODE=local-full vite --host 0.0.0.0",
+    "build": "tsc --noEmit && VITE_AI_X3D_ASSET_MODE=public-core vite build",
+    "build:local": "npm run assets:setup && tsc --noEmit && VITE_AI_X3D_ASSET_MODE=local-full vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "classroom": "node scripts/start-class.mjs",
+    "test": "vitest run tests/domain.test.ts tests/language.test.ts tests/conic.test.ts tests/membrane.test.ts tests/gravity.test.ts tests/molecule.test.ts tests/preposition.test.ts tests/geo.test.ts tests/compiler.test.ts tests/next-token.test.ts tests/embedding.test.ts",
+    "test:watch": "vitest",
+    "test:e2e": "node scripts/run-e2e.mjs",
+    "verify:offline": "node scripts/verify-offline.mjs",
+    "verify:files": "node scripts/check-file-lengths.mjs",
+    "verify:bundle": "node scripts/check-bundle.mjs",
+    "verify:media": "node scripts/verify-media.mjs",
+    "soak:web": "node scripts/soak-web.mjs",
+    "verify:public": "npm run test && npm run build && npm run verify:bundle && npm run verify:offline && npm run verify:files && npm run assets:verify",
+    "verify": "npm run test && npm run build:local && npm run verify:bundle && npm run verify:offline && npm run verify:files && npm run verify:media && npm run assets:verify && npm run test:e2e",
+    "record:web": "node scripts/record-web-demos.mjs"
+  },
+  "dependencies": {
+    "@deck.gl/core": "9.4.0",
+    "@deck.gl/geo-layers": "9.4.0",
+    "@deck.gl/layers": "9.4.0",
+    "maplibre-contour": "0.1.1",
+    "maplibre-gl": "6.14.0",
+    "qrcode": "1.5.4",
+    "qrcode-terminal": "0.12.0",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "24.9.1",
+    "@types/qrcode": "1.5.5",
+    "@types/three": "0.180.0",
+    "@webgpu/types": "0.1.74",
+    "topojson-client": "3.1.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "vitest": "5.0.4",
+    "world-atlas": "2.0.2"
+  }
+}
