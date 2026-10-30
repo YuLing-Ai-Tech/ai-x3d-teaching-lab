@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.cache/
+test-results/
+playwright-report/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Local-only asset mounts. These paths are populated from ../private-assets.
+public/blender/
+public/media/
+public/terrain/
+public/data/china-hd/
+public/data/china-relief/
+public/data/long-march/
+public/data/china-outline.json
+public/data/china-nine-dash.json
+public/data/china-terrain.json
+public/data/terrain-samples.json
+public/local-assets/
+
+# Generated or private teaching deliverables.
+docs/*.pdf
+*.blend1
+
